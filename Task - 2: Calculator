@@ -1,0 +1,48 @@
+num1 = int(input("Enter the 1st Number: "))
+num2 = int(input("Enter the 2nd Number: "))
+
+print("\n")
+
+print("Choose the operation to perform:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+print("5. Modulus (%)")
+print("6. Exponentiation (**)")
+print("7. Floor Division (//)")
+
+print("\n")
+
+operation = input("Enter the operation (+, -, *, /, %, **, //): ")
+
+match operation:
+    case '+':
+        result = num1 + num2
+    case '-':
+        result = num1 - num2
+    case '*':
+        result = num1 * num2
+    case '/':
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "Error: Division by zero"
+    case '%':
+        if num2 != 0:
+            result = num1 % num2
+        else:
+            result = "Error: Division by zero"
+    case '**':
+        result = num1 ** num2
+    case '//':
+        if num2 != 0:
+            result = num1 // num2
+        else:
+            result = "Error: Division by zero"
+    case _:
+        result = "Invalid operation"
+
+print("\n")
+
+print(f"Result of {operation} between {num1} and {num2} is: {result}")
